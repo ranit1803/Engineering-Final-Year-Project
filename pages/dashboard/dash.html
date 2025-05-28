@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BioMedX Dashboard</title>
+
+  <link rel="stylesheet" href="../../assets/css/dash.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  
+</head>
+<body>
+  <div class="sidebar">
+    <h2><i class="fas fa-bars"></i> BioMedX</h2>
+    <nav>
+      <a href="../../pages/chart/chart.html" target="_blank">Analytics</a>
+      <a href="../../pages/maps/maps.html">Maps</a>
+      
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="top-bar">
+      <h1>Your Dashboard</h1>
+      <button class="deposit-btn" id="generateReportBtn">Generate Report</button>
+    </div>
+
+    <div class="top-assets">
+      <div class="asset-card">
+        <h3><i class="fas fa-thermometer-half"></i> Body Temperature</h3>
+        <p></p>
+        </div>
+        <div class="asset-card">
+        <h3><i class="fas fa-heartbeat"></i> Heart Rate</h3>
+        <p></p>
+        </div>
+        <div class="asset-card">
+        <h3><i class="fas fa-lungs"></i> Oxygen Level</h3>
+        <p></p>
+        </div>
+      <div class="portfolio-card">
+        <h3>Notify The User</h3>
+        <p></p>
+        <button id="sendMailBtn">Send Mail</button>
+      </div>
+    </div>
+
+     <div class="bottom-assets">
+        <div class="asset-card">
+        <h3><i class="fas fa-sun"></i> Room Temperature</h3>
+        <p></p>
+        </div>
+        <div class="asset-card">
+        <h3><i class="fas fa-cloud"></i> Humidity</h3>
+        <p></p>
+        </div>
+         <div class="asset-card">
+        <h3><i class="fas fa-wind"></i> Gas Particles</h3>
+        <p></p>
+        </div>
+    </div>
+  </div>
+<script src="../../assets/js/firebase-app.js"></script>
+<script src="../../assets/js/firebase-auth.js"></script>
+<script>
+  firebase.initializeApp({
+    apiKey: "AIzaSyDN1lg6vG4lpc_XqE4Fp9NjmTMKL8TZ1Zg",
+    authDomain: "finalprojcopy.firebaseapp.com",
+    projectId: "finalprojcopy",
+    storageBucket: "finalprojcopy.firebasestorage.app",
+    messagingSenderId: "1016618630409",
+    appId: "1:1016618630409:web:79bdbfbaaf4fc20ce1a7d8",
+    measurementId: "G-5ZLQ06YMH5"
+  });
+</script>
+
+<!-- THEN load EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("2N4yHpqHBVlmfg4CT");
+</script>
+
+<!--for report-->
+<script>
+  document.getElementById('generateReportBtn').addEventListener('click', function() {
+    fetch('http://localhost:5000/generate_report')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.blob();
+      })
+      .then(blob => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'AI_Health_Report9.pdf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      })
+      .catch(error => console.error('Error:', error));
+  });
+</script>
+
+
+
+
+
+  <script src="../../assets/js/dash.js"></script>
+</body>
+</html>

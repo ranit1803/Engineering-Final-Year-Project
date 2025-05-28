@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../../assets/css/slider.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="/" class="active">Home</a>
+            <a href="../../pages/dashboard/dash.html">DashBoard</a>
+            
+            <a href="#" id="profile-link">Logout</a>
+        </nav>
+    </header>
+
+
+    
+    <div class="slider">
+
+
+        <div class="list">
+
+            <div class="item">
+                <img src="../../assets/imgs/slider/7 life changing.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">7 Life Changing</div>
+                    <div class="type">Fitness</div>
+                    <div class="description">
+                        Consistency in strength training, recovery, hydration, nutrition, and gradual progress leads to long-term fitness transformation, better metabolism, mental well-being, and injury prevention.
+                    </div>
+                    <div class="button">
+                        <button onclick="window.open('https://youtu.be/-_VhU5rqyko?si=Yx9_z7F5Z6NJUr7o', '_blank')">Play</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="../../assets/imgs/slider/healthy foods.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">Healthy</div>
+                    <div class="type">Foods</div>
+                    <div class="description">
+                        Healthy foods include fruits, vegetables, lean proteins, whole grains, nuts, seeds, and healthy fats that provide essential nutrients for overall well-being.
+                    </div>
+                    <div class="button">
+                        <button onclick="window.open('https://youtu.be/BGwb8_hbzUM?si=Iy-3CvwM44vdG0VC', '_blank')">Play</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="../../assets/imgs/slider/is yoga.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">Is Yoga</div>
+                    <div class="type">Good For You?</div>
+                    <div class="description">
+                        Yoga enhances physical strength, flexibility, and posture while also promoting mental clarity, reducing stress, improving breathing, and fostering overall well-being.
+                    </div>
+                    <div class="button">
+                        <button onclick="window.open('https://youtu.be/CktgisQeh7Q?si=sy5MKM9mJr2c3bWf', '_blank')">Play</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="../../assets/imgs/slider/top 10 heart.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">Top 10 Foods For</div>
+                    <div class="type">Heart</div>
+                    <div class="description">
+                        Top 10 heart-cleansing foods include berries, leafy greens, nuts, fatty fish, whole grains, avocados, dark chocolate, garlic, and olive oil, all of which support heart health by reducing inflammation, lowering cholesterol, and improving circulation.
+                    </div>
+                    <div class="button">
+                        <button onclick="window.open('https://youtu.be/guHFpjaFSgY?si=332OKmOxx1obYzRz', '_blank')">Play</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="../../assets/imgs/slider/what is best.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">Best Way to</div>
+                    <div class="type">Stay Healthy</div>
+                    <div class="description">
+                        The best way to stay healthy is through a balanced diet, regular exercise, good sleep, and stress management.
+                    </div>
+                    <div class="button">
+                        <button onclick="window.open('https://youtu.be/CktgisQeh7Q?si=sy5MKM9mJr2c3bWf', '_blank')">Play</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="thumbnail">
+
+            <div class="item">
+                <img src="../../assets/imgs/slider/7 life changing.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="../../assets/imgs/slider/healthy foods.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="../../assets/imgs/slider/is yoga.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="../../assets/imgs/slider/top 10 heart.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="../../assets/imgs/slider/what is best.jpg" alt="">
+            </div>
+
+        </div>
+
+
+        <div class="nextPrevArrows">
+            <button class="prev"> < </button>
+            <button class="next"> > </button>
+        </div>
+
+
+    </div>
+
+    <!--logout-->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script>
+  // Firebase config
+  const firebaseConfig = {
+    apiKey: "AIzaSyDN1lg6vG4lpc_XqE4Fp9NjmTMKL8TZ1Zg",
+    authDomain: "finalprojcopy.firebaseapp.com",
+    projectId: "finalprojcopy",
+    storageBucket: "finalprojcopy.firebasestorage.app",
+    messagingSenderId: "1016618630409",
+    appId: "1:1016618630409:web:79bdbfbaaf4fc20ce1a7d8",
+    measurementId: "G-5ZLQ06YMH5"
+  };
+
+  // Initialize Firebase
+  if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+  }
+
+  const auth = firebase.auth();
+
+  // Profile link logout
+  document.getElementById('profile-link').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent link behavior
+    auth.signOut().then(() => {
+      window.location.href = '/index.html'; // Redirect to index.html after logout
+    });
+  });
+</script>
+
+
+
+
+
+
+    <script src="../../assets/js/slider.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    position: relative;
+    color: #fff;
+}
+
+/* Full-Screen Map Container */
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+/* Title Overlay */
+h4 {
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    color: #000; /* Pure black text */
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.7); /* Optional light background */
+    border-radius: 4px; /* Minimal rounding */
+}
+
+/* Leaflet Specific Fixes */
+.leaflet-container {
+    width: 100% !important;
+    height: 100% !important;
+    font-family: inherit !important;
+}
+
+.leaflet-control-attribution {
+    background: rgba(255, 255, 255, 0.8) !important;
+    font-size: 0.7rem !important;
+}
+
+/* Remove any default margins */
+.leaflet-top, .leaflet-bottom {
+    z-index: 100 !important;
+    margin: 0 !important;
+}

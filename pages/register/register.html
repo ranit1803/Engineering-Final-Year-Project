@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioMedX | Login & Register</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/assets/css/register.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="col col-1">
+            <div class="image-layer">
+                <img src="/assets/imgs/register/white-outline.png" class="form-image-main">
+                <img src="/assets/imgs/register/cloud.png" class="form-image cloud">
+                <img src="/assets/imgs/register/coin.png" class="form-image coin">
+                <img src="/assets/imgs/register/dots.png" class="form-image dots">
+                <img src="/assets/imgs/register/rocket.png" class="form-image rocket">
+                <img src="/assets/imgs/register/spring.png" class="form-image spring">
+                <img src="/assets/imgs/register/stars.png" class="form-image stars">
+            </div>
+            <p class="featured-words">Welcome to <span>BioMedX</span> your trusted digital partner in everyday health and wellness.</p>
+        </div>
+        <div class="col col-2">
+            <div class="btn-box">
+                <button class="btn btn-1" id="login">Sign In</button>
+                <button class="btn btn-2" id="register">Sign Up</button>
+            </div>
+            <div class="login-form">
+                <div class="form-title">
+                    <span>Sign In</span>
+                </div>
+                <div class="form-inputs">
+                    <div class="input-box">
+                        <input type="email" id="login-email" class="text input-field" placeholder="Email" required>
+                        <i class="bx bx-envelope icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="login-password" class="text input-field" placeholder="Password" required>
+                        <i class="bx bx-lock-alt icon"></i>
+                    </div>
+                    <div class="forgot-pass">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <div class="input-box">
+                        <button class="input-submit" id="login-btn">
+                            <span>Sign In</span>
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="social-login">
+                    <i class="bx bxl-google"></i>
+                    <i class="bx bxl-facebook"></i>
+                    <i class="bx bxl-twitter"></i>
+                    <i class="bx bxl-github"></i>
+                </div>
+            </div>
+            <div class="registration-form">
+                <div class="form-title">
+                    <span>Create Account</span>
+                </div>
+                <div class="form-inputs">
+                    <div class="input-box">
+                        <input type="text" id="signup-name" class="text input-field" placeholder="Username" required>
+                        <i class="bx bx-user icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" id="signup-email" class="text input-field" placeholder="Email" required>
+                        <i class="bx bx-envelope icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="signup-password" class="text input-field" placeholder="Password" required>
+                        <i class="bx bx-lock-alt icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <button class="input-submit" id="signup-btn">
+                            <span>Register</span>
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="social-login">
+                    <i class="bx bxl-google"></i>
+                    <i class="bx bxl-facebook"></i>
+                    <i class="bx bxl-twitter"></i>
+                    <i class="bx bxl-github"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add these before your register.js script -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="/assets/js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    background-color: #f4f4f4;
+    align-content: center;
+    min-height: 100vh;
+}
+.content small{
+    font-size: 14px;
+    color: #f9f9f9;
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+    width: 85vw;
+    margin: 20px auto; /* Add margin to create spacing between sections */
+}
+.image1 {
+    background: url("../imgs/aboutus/sandeep.jpg") center/cover no-repeat;
+}
+
+.image2 {
+    background: url("../imgs/aboutus/sagar.jpg") center/cover no-repeat;
+}
+
+.image3 {
+    background: url("../imgs/aboutus/sai.jpg") center/cover no-repeat;
+}
+
+.image4 {
+    background: url("../imgs/aboutus/ranit.jpg") center/cover no-repeat;
+}
+
+.content{
+    background: #359381;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.content h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 6px;
+    opacity: 0.9;
+    color: #f9f9f9;
+}
+.content span{
+    height: 0.5px;
+    width: 80px;
+    background: #f9f9f9;
+    margin: 10px 0;
+}
+.content p{
+    padding-bottom: 15px;
+    font-weight: 300;
+    opacity: 0.7;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #ffffff;
+}
+.links{
+    margin: 15px 0;
+}
+.links li{
+    border: 0.5px solid #f4f4f4;
+    list-style: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 160px;
+    text-align: center;
+}
+.links li a{
+    text-transform: uppercase;
+    color: #f9f9f9;
+    text-decoration: none;
+}
+.links li:hover{
+    border-color: #003329;
+}
+.links li:hover a{
+    color :#003329;
+}
+.vertical-line{
+    height: 30px;
+    width: 0.5px;
+    background: #f9f9f9;
+    margin: 0 auto;
+}
+
+
+/*****************/
+
+@media(max-width: 992px){
+    section{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .image{
+        height: 100vh;
+    }
+    .content{
+        height: 100vh;
+    }
+    .content h2{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .content span{
+        margin: 20px 0;
+    }
+    .content p{
+        font-size: 14px;
+    }
+    .links li a{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .links{
+        margin: 5px 0;
+    }
+    .links li{
+        padding: 6px 10px;
+    }
+    .icons li i{
+        font-size: 15px;
+    }
+}
