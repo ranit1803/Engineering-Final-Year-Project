@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 
 # Initialize the OpenAI client
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Fetch Sensor Data
 def fetch_sensor_data():
