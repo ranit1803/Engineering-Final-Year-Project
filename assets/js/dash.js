@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const CHANNEL_ID = "2408412"; // 🔁 Replace with your ThingSpeak Channel ID
-  const API_KEY = "LW1BUX3QZHLA1W3L";  // 🔁 Optional if your channel is public
+  const CHANNEL_ID = "CHANNEL_ID"; // 🔁 Replace with your ThingSpeak Channel ID
+  const API_KEY = "READ_API";  // 🔁 Optional if your channel is public
 
   // Select all asset cards
   const allCards = document.querySelectorAll('.asset-card');
@@ -54,7 +54,7 @@ firebase.auth().onAuthStateChanged(function(user) {
             sendBtn.addEventListener('click', function() {
                 console.log("Send button clicked!");
 
-              fetch('https://api.thingspeak.com/channels/2408412/feeds.json?results=1&api_key=LW1BUX3QZHLA1W3L')
+              fetch('https://api.thingspeak.com/channels/CHANNEL_ID/feeds.json?results=1&api_key=CHANNEL_READ_API_KEY') // 🔁 Replace with your ThingSpeak Channel ID and Read API Key
                     .then(response => response.json())
                     .then(data => {
                         const feed = data.feeds[0];
@@ -69,7 +69,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                             Timestamp: ${feed.created_at}
                         `;
 
-                        emailjs.send("service_6g7u6g8", "template_n09d062", {
+                        emailjs.send("SERVICE_ID", "TEMPLATE_ID", {
                             user_email: userEmail,
                             message: message
                         }).then(function(response) {

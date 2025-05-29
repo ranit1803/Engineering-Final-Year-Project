@@ -1,12 +1,12 @@
 //remove start
 const firebaseConfig = {
-    apiKey: "AIzaSyDN1lg6vG4lpc_XqE4Fp9NjmTMKL8TZ1Zg",
-    authDomain: "finalprojcopy.firebaseapp.com",
-    projectId: "finalprojcopy",
-    storageBucket: "finalprojcopy.firebasestorage.app",
-    messagingSenderId: "1016618630409",
-    appId: "1:1016618630409:web:79bdbfbaaf4fc20ce1a7d8",
-    measurementId: "G-5ZLQ06YMH5"
+    apiKey: "FIREBASE_API",
+    authDomain: "AUTH_DOMAIN",
+    projectId: "PROJECT_ID",
+    storageBucket: "STORAGE_BUCKET",
+    messagingSenderId: "MESSAGING_SENDER_ID",
+    appId: "APP_ID",
+    measurementId: "MEASUREMENT_ID"
 };
 
 if (!firebase.apps.length) {

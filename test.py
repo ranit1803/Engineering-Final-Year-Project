@@ -6,11 +6,11 @@ import os
 from pathlib import Path
 
 # Initialize the OpenAI client
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key="Open Ai Key")
 
 # Fetch Sensor Data
 def fetch_sensor_data():
-    url = "https://api.thingspeak.com/channels/2408412/feeds.json?api_key=LW1BUX3QZHLA1W3L&results=1"
+    url = "https://api.thingspeak.com/channels/CHANNEL_ID/feeds.json?api_key=CHANNEL_READ_API_KEY&results=1"
     response = requests.get(url)
 
     if response.status_code != 200:

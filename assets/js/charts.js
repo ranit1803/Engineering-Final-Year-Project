@@ -1,5 +1,5 @@
-const channelId = '2408412';
-const apiKey = 'LW1BUX3QZHLA1W3L';
+const channelId = 'CHANNEL_ID'; // Replace with your actual channel ID
+const apiKey = 'READ_API_KEY'; // Replace with your actual read API key
 
 const sensors = [
   { field: 3, label: 'Body Temperature', unit: '°C', id: 'bodyTempChart', color: 'rgba(255,99,132,1)' },

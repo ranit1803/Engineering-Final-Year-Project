@@ -9,8 +9,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 let marker = L.marker([0, 0]).addTo(map);
 
 // ThingSpeak API details
-const THINGSPEAK_CHANNEL_ID = "2408412";
-const THINGSPEAK_API_KEY = "LW1BUX3QZHLA1W3L";
+const THINGSPEAK_CHANNEL_ID = "CHANNEL_ID"; // Replace with your ThingSpeak channel ID
+const THINGSPEAK_API_KEY = "READ_API_KEY"; // Replace with your ThingSpeak read API key
 const THINGSPEAK_URL = `https://api.thingspeak.com/channels/${THINGSPEAK_CHANNEL_ID}/feeds/last.json?api_key=${THINGSPEAK_API_KEY}`;
 
 // Function to fetch GPS data from ThingSpeak
