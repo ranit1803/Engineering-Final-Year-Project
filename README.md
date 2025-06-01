@@ -80,7 +80,7 @@ This system targets children, adults (especially workers, soldiers, and women re
 <img src="images/flowchart.png" alt="Sensor Based Surveillance Jacket" width="400" height="300"/>
 <img src="images/block%20diagram.png" alt="Sensor Based Surveillance Jacket" width="400" height="300"/>
 <img src="images/component%20placement.png" alt="Sensor Based Surveillance Jacket" width="400" height="300"/>
-<img src="images/AI%20Response%20in%20Terminal.png" alt="Sensor Based Surveillance Jacket" width="400" height="300"/>
+<img src="images/AI%20Response%20in%20Terminal.jpg" alt="Sensor Based Surveillance Jacket" width="400" height="300"/>
 
 ---
 
