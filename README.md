@@ -7,7 +7,7 @@ The **Intelligent Sensor-Based Surveillance Jacket** is a wearable IoT system de
 This system targets children, adults (especially workers, soldiers, and women requiring safety alerts), and elderly people by providing real-time monitoring, fall detection, environmental adaptation, and emergency notifications.
 
 <img src="images/jacket%20inner.jpg" alt="Sensor Based Surveillance Jacket" width="400" height="300"/>
-<img src="images/jacket%20outer.jpg" alt="Sensor Based Surveillance Jacket" width="400" height="300"/>
+<img src="images/jacket%20outter.jpg" alt="Sensor Based Surveillance Jacket" width="400" height="300"/>
 
 ---
 
@@ -76,6 +76,11 @@ This system targets children, adults (especially workers, soldiers, and women re
    python app.py
    ```
 8. Access the web dashboard on the configured local/remote server URL.
+
+<img src="images/flowchart.jpg" alt="Sensor Based Surveillance Jacket" width="400" height="300"/>
+<img src="images/block%20diagram.jpg" alt="Sensor Based Surveillance Jacket" width="400" height="300"/>
+<img src="images/component%20placement.jpg" alt="Sensor Based Surveillance Jacket" width="400" height="300"/>
+<img src="images/AI%20Response%20in%20Terminal" alt="Sensor Based Surveillance Jacket" width="400" height="300"/>
 
 ---
 
