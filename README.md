@@ -6,7 +6,7 @@ The **Intelligent Sensor-Based Surveillance Jacket** is a wearable IoT system de
 
 This system targets children, adults (especially workers, soldiers, and women requiring safety alerts), and elderly people by providing real-time monitoring, fall detection, environmental adaptation, and emergency notifications.
 
-![Sensor Based Surveillance Jacket](images/jacket inner.jpg)
+![Sensor Based Surveillance Jacket](images/jacket%20inner.jpg)
 
 ---
 
